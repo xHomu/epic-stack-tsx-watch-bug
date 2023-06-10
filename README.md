@@ -10,3 +10,6 @@ The main branch is a vanilla Epic Stack installed with:
 
 
 The following branches demonstrate the issues:
+
+* `tsx watch` without editing stdio: https://github.com/xHomu/epic-stack-tsx-watch-bug/tree/tsx-watch-no-child-process
+* `ts-node` alternative https://github.com/xHomu/epic-stack-tsx-watch-bug/tree/ts-node
