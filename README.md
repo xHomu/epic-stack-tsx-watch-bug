@@ -1,12 +1,5 @@
-## This Repo explores the issues with using `tsx watch` with Epic Stack/Remix in a Windows environment
+## This branch uses `ts-node with nodemon` as alternative to TSX
 
-* Reference: https://github.com/remix-run/remix/pull/6538
+ts-node with nodemon doesn't experience the same issue as `tsx watch`, and we can mostly make up the performance difference with the swc plugin by adding `{ "ts-node": { "swc": true } }` to `tsconfig.json`:
 
-The main branch is a vanilla Epic Stack installed with:
-
- `npx create-remix@latest --typescript --install --template epicweb-dev/epic-stack`
-
- Run `npm run dev` to get the app started.
-
-
-The following branches demonstrate the issues:
+![image](https://github.com/remix-run/remix/assets/84349818/8bd797ea-0fd8-407a-ab94-606b774e9dee)

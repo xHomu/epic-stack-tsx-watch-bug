@@ -7,7 +7,8 @@
     "build": "run-s build:*",
     "build:remix": "remix build --sourcemap",
     "build:server": "tsx ./other/build-server.ts",
-    "dev": "remix dev -c \"node ./server/dev-server.js\" --no-restart",
+    "dev": "remix dev -c \"npm run dev:server\" --no-restart",
+    "dev:server": "cross-env nodemon --exec 'ts-node --esm --require dotenv/config ./index.js' --watch ./index.js",
     "prisma:studio": "prisma studio",
     "format": "prettier --write .",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
@@ -44,6 +45,7 @@
     "@remix-run/router": "^1.6.3",
     "@remix-run/server-runtime": "^1.17.0",
     "@sentry/remix": "^7.54.0",
+    "@swc/core": "^1.3.62",
     "address": "^1.2.2",
     "bcryptjs": "^2.4.3",
     "better-sqlite3": "^8.4.0",
@@ -61,6 +63,7 @@
     "litefs-js": "^1.1.2",
     "lru-cache": "^9.1.1",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
     "prisma": "^4.15.0",
     "qrcode": "^1.5.3",
     "react": "^18.2.0",
@@ -71,6 +74,7 @@
     "tailwind-merge": "^1.13.0",
     "thirty-two": "^1.0.2",
     "tiny-invariant": "^1.3.1",
+    "ts-node": "^10.9.1",
     "zod": "^3.21.4"
   },
   "devDependencies": {
